@@ -217,77 +217,77 @@ class DropdownTextView : LinearLayout {
 
         val typeValue = TypedValue()
 
-        a.getValue(R.styleable.DropdownTextView_title_text, typeValue)
+        a.getValue(R.styleable.DropdownTextView_title_text_ddtv, typeValue)
         titleText = when (typeValue.type) {
             TypedValue.TYPE_STRING -> typeValue.string as String?
             TypedValue.TYPE_REFERENCE -> resources.getString(typeValue.resourceId)
             else -> null
         }
 
-        a.getValue(R.styleable.DropdownTextView_title_text_color, typeValue)
+        a.getValue(R.styleable.DropdownTextView_title_text_color_ddtv, typeValue)
         titleTextColor = when (typeValue.type) {
             TypedValue.TYPE_REFERENCE -> ContextCompat.getColor(context, typeValue.resourceId)
             else -> typeValue.data
         }
 
-        a.getValue(R.styleable.DropdownTextView_title_text_color_expanded, typeValue)
+        a.getValue(R.styleable.DropdownTextView_title_text_color_expanded_ddtv, typeValue)
         titleTextColorExpanded = when (typeValue.type) {
             TypedValue.TYPE_REFERENCE -> ContextCompat.getColor(context, typeValue.resourceId)
             else -> typeValue.data
         }
 
-        titleTextSizeRes = a.getResourceId(R.styleable.DropdownTextView_title_text_size, -1)
-        titleFontRes = a.getResourceId(R.styleable.DropdownTextView_title_font, -1)
+        titleTextSizeRes = a.getResourceId(R.styleable.DropdownTextView_title_text_size_ddtv, -1)
+        titleFontRes = a.getResourceId(R.styleable.DropdownTextView_title_font_ddtv, -1)
 
-        a.getValue(R.styleable.DropdownTextView_content_text, typeValue)
+        a.getValue(R.styleable.DropdownTextView_content_text_ddtv, typeValue)
         contentText = when (typeValue.type) {
             TypedValue.TYPE_STRING -> typeValue.string as String?
             TypedValue.TYPE_REFERENCE -> resources.getString(typeValue.resourceId)
             else -> null
         }
 
-        a.getValue(R.styleable.DropdownTextView_content_text_color, typeValue)
+        a.getValue(R.styleable.DropdownTextView_content_text_color_ddtv, typeValue)
         contentTextColor = when (typeValue.type) {
             TypedValue.TYPE_REFERENCE -> ContextCompat.getColor(context, typeValue.resourceId)
             else -> typeValue.data
         }
 
-        a.getValue(R.styleable.DropdownTextView_link_text_color, typeValue)
+        a.getValue(R.styleable.DropdownTextView_link_text_color_ddtv, typeValue)
         linkTextColor = when (typeValue.type) {
             TypedValue.TYPE_REFERENCE -> ContextCompat.getColor(context, typeValue.resourceId)
             else -> typeValue.data
         }
 
-        a.getValue(R.styleable.DropdownTextView_underline_link, typeValue)
+        a.getValue(R.styleable.DropdownTextView_underline_link_ddtv, typeValue)
         isLinkUnderline = when (typeValue.type) {
             TypedValue.TYPE_INT_BOOLEAN -> typeValue.data == 1
             else -> true
         }
 
-        contentTextSizeRes = a.getResourceId(R.styleable.DropdownTextView_content_text_size, -1)
-        contentFontRes = a.getResourceId(R.styleable.DropdownTextView_content_font, -1)
+        contentTextSizeRes = a.getResourceId(R.styleable.DropdownTextView_content_text_size_ddtv, -1)
+        contentFontRes = a.getResourceId(R.styleable.DropdownTextView_content_font_ddtv, -1)
 
-        bgRegularDrawableRes = a.getResourceId(R.styleable.DropdownTextView_bg_drawable_regular, -1)
+        bgRegularDrawableRes = a.getResourceId(R.styleable.DropdownTextView_bg_drawable_regular_ddtv, -1)
         bgExpandedDrawableRes = a.getResourceId(
-                R.styleable.DropdownTextView_bg_drawable_expanded,
+                R.styleable.DropdownTextView_bg_drawable_expanded_ddtv,
                 -1
         )
 
         panelPaddingRes = a.getResourceId(
-                R.styleable.DropdownTextView_panel_padding,
+                R.styleable.DropdownTextView_panel_padding_ddtv,
                 R.dimen.panel_default_padding
         )
         contentPaddingRes = a.getResourceId(
-                R.styleable.DropdownTextView_content_padding,
+                R.styleable.DropdownTextView_content_padding_ddtv,
                 R.dimen.content_default_padding
         )
 
         arrowDrawableRes = a.getResourceId(
-                R.styleable.DropdownTextView_arrow_drawable,
+                R.styleable.DropdownTextView_arrow_drawable_ddtv,
                 R.drawable.ic_arrow
         )
 
-        expandDuration = a.getInteger(R.styleable.DropdownTextView_expand_duration, 300)
+        expandDuration = a.getInteger(R.styleable.DropdownTextView_expand_duration_ddtv, 300)
     }
 
     private fun initialize() {
